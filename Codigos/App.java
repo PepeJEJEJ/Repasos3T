@@ -2,14 +2,15 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        String nombre = sc.nextLine();
+        int edad = sc.nextInt();
+        Persona p = new Persona(nombre, edad);
 
-        // 1. Crear persona
-        Persona p = new Persona("Ea-Nasir", 40);
-
-        // 2. Guardar objeto
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Persona.txt"))) {
             oos.writeObject(p);
             System.out.println("GUARDADO CORRECTAMENTE");
@@ -17,7 +18,6 @@ public class App {
             throw new Exception("ERROR AL GUARDAR EL OBJETO");
         }
 
-        // 3. Leer objeto
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("Persona.txt"))) {
 
             Persona personaLeida = (Persona) ois.readObject();
