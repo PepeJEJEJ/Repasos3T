@@ -6,7 +6,9 @@ import java.io.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        try {
+        boolean Sigue=true;
+        do {
+            try {
             System.out.println("Pon Nombre");
             String Nombre = sc.nextLine();
             System.out.println("Pon Precio");
@@ -18,7 +20,9 @@ public class Main {
             bw.newLine();
             bw.close();
         } catch (Exception e) {
+            Sigue=false;
             System.out.println("ERROR" + e);
         }
+        } while (Sigue=true);
     }
 }

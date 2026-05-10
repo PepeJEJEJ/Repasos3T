@@ -1,4 +1,5 @@
 package I;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -23,8 +24,12 @@ public class Main {
                         System.out.println("Añadio: " + nombre);
                         break;
                     case 3:
-                        int posicion = sc.nextInt();
-                        System.out.println(nombres.get(posicion));
+                        String posicion = sc.nextLine();
+                        if (nombres.contains(posicion)) {
+                            System.out.println("Existe");
+                        } else {
+                            System.out.println("No Existe");
+                        }
                         break;
                     case 4:
                         String borrar = sc.nextLine();
@@ -32,7 +37,7 @@ public class Main {
                         break;
                     case 5:
                         for (int i = 0; i < CantInv(); i++) {
-                            System.out.println(nombres.contains(nombres));
+                            System.out.println(nombres.get(i));
                         }
                         break;
                     case 6:
@@ -41,7 +46,9 @@ public class Main {
                 }
             } while (sigue = true);
 
-        } catch (Exception e) {
+        } catch (
+
+        Exception e) {
             System.out.println(e);
         }
     }

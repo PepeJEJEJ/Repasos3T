@@ -1,4 +1,5 @@
 package II;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -9,8 +10,13 @@ public class Main {
         try {
             Scanner sc = new Scanner(System.in);
             boolean sigue = true;
+            System.out.println("Pon nombre del alumno");
             String nombre = sc.nextLine();
             do {
+                System.out.println("1 Pones la nota");
+                System.out.println("2 La media de las notas");
+                System.out.println("3 Salir");
+                System.out.println("Teclea una opcion");
                 int opcion = sc.nextInt();
                 sc.nextLine();
                 switch (opcion) {

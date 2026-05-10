@@ -1,4 +1,5 @@
 package IV;
+
 import java.io.*;
 
 public class Main {
@@ -10,7 +11,7 @@ public class Main {
         int min = 11;
         int aprobados = 0;
         int suspensos = 0;
-
+        double media=0.0;
         try {
             try (BufferedReader br = new BufferedReader(new FileReader("notas.txt"))) {
                 String linea;
@@ -32,8 +33,9 @@ public class Main {
                         suspensos++;
                 }
             }
-            double media = (total > 0) ? (double) suma / total : 0;
-
+            if (total > 0) {
+                media = suma / total;
+            }
             System.out.println("MEDIA: " + media);
             System.out.println("MÁXIMA: " + max);
             System.out.println("MÍNIMA: " + min);

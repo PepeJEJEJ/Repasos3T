@@ -1,4 +1,5 @@
 package III;
+
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -7,12 +8,18 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         HashMap<String, String> diccionario = new HashMap<>();
         for (int i = 0; i < 5; i++) {
+            System.out.println("Dame la palabra en Español");
             String español = sc.nextLine();
+            System.out.println("Dame la traduccion en Ingles");
             String ingles = sc.nextLine();
-            System.out.println(i);
-            diccionario.put(español, ingles + (i));
+            diccionario.put(español, ingles);
         }
+        System.out.println("Dame la palabra en español que debo buscar");
         String Llave = sc.nextLine();
-        System.out.println(diccionario.containsKey(Llave));
+        if (diccionario.containsKey(Llave)) {
+            System.out.println(diccionario.get(Llave));
+        } else {
+            System.out.println("La palabra no esta en el diccionario");
+        }
     }
 }

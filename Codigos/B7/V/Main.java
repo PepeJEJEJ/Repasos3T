@@ -18,10 +18,11 @@ public class Main {
             System.out.print("DNI: ");
             String dni = sc.nextLine().trim();
 
-            if (!mapa.containsKey(dni))
+            if (!mapa.containsKey(dni)) {
                 throw new Exception("No existe.");
-
-            System.out.println(mapa.get(dni).toString());
+            } else {
+                System.out.println(mapa.get(dni).toString());
+            }
 
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
