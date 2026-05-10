@@ -1,7 +1,5 @@
 import java.util.HashMap;
 import java.util.InputMismatchException;
-import java.util.Iterator;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -13,10 +11,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         try {
             for (int i = 1; i <= 3; i++) {
-                System.out.println("Nombre del producto " + i + ":");
+                System.out.println("Producto " + i + ":");
                 String nombre = sc.nextLine();
 
-                System.out.println("Stock inicial:");
+                System.out.println("Stock Al Inicio:");
                 int stock = sc.nextInt();
                 sc.nextLine();
                 productos.put(nombre, stock);
@@ -35,15 +33,15 @@ public class Main {
                 switch (opcion) {
 
                     case 1:
-                        System.out.println("Producto a actualizar:");
+                        System.out.println("Producto que vamos a actualizar:");
                         String prod = sc.nextLine();
 
                         if (!productos.containsKey(prod)) {
-                            System.out.println("Ese producto no existe.");
+                            System.out.println("Eso no existe.");
                             break;
                         }
 
-                        System.out.println("Cantidad a sumar/restar (ej: +5 o -3):");
+                        System.out.println("Cantidad a sumar o restar (+5 o -8):");
                         int cantidad = sc.nextInt();
                         sc.nextLine();
 
@@ -79,10 +77,10 @@ public class Main {
         int nuevo = actual + cantidad;
 
         if (nuevo < 0) {
-            System.out.println("No se puede dejar stock negativo.");
+            System.out.println("Stock negativo???????.");
         } else {
             productos.put(producto, nuevo);
-            System.out.println("Stock actualizado. Nuevo stock de " + producto + ": " + nuevo);
+            System.out.println("El Stock esta Actualizado. El Nuevo stock de " + producto + " es: " + nuevo);
         }
     }
 }
