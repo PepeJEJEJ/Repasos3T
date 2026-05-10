@@ -21,7 +21,7 @@ public class Main {
             if (!mapa.containsKey(dni))
                 throw new Exception("No existe.");
 
-            System.out.println(mapa.get(dni));
+            System.out.println(mapa.get(dni).toString());
 
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
