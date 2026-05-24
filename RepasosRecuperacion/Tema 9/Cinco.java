@@ -2,57 +2,33 @@ import javax.swing.*;
 
 public class Cinco {
     public static void main(String[] args) {
-        JFrame ventana = new JFrame("Por el Qlo te la Hinco");
-        ventana.setSize(300, 200);
+        double cambio=0.80;
+        JFrame ventana = new JFrame("Por el qlo te la hinco, Conversor Euros/Dólares");
+        ventana.setSize(300, 150);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         JPanel panel = new JPanel();
         ventana.add(panel);
-        JTextField numero1 = new JTextField(10);
-        panel.add(numero1);
 
-        JTextField numero2 = new JTextField(10);
-        panel.add(numero2);
+        JTextField campo = new JTextField(10);
+        panel.add(campo);
 
-        JTextField caja1 = new JTextField(10);
-        panel.add(caja1);
+        JLabel resultado = new JLabel("Resultado");
+        panel.add(resultado);
 
-        JButton sumar = new JButton("Sumar");
-        panel.add(sumar);
+        JButton ConEuro = new JButton("Dolares=>Euros");
+        panel.add(ConEuro);
+        JButton ConDolares = new JButton("Euros=>Dolares");
+        panel.add(ConDolares);
 
-        JButton restar = new JButton("Restar");
-        panel.add(restar);
-
-        JButton multiplicar = new JButton("Multiplicar");
-        panel.add(multiplicar);
-
-        JButton dividir = new JButton("Dividir");
-        panel.add(dividir);
-
-        sumar.addActionListener(e -> {
-            int num1 = Integer.parseInt(numero1.getText());
-            int num2 = Integer.parseInt(numero2.getText());
-            int resultado = num1 + num2;
-            caja1.setText("" + resultado);
+        ConEuro.addActionListener(e -> {
+            Double valor=Double.parseDouble(campo.getText());
+            resultado.setText(""+(valor*cambio));
         });
-
-        restar.addActionListener(e -> {
-            int num1 = Integer.parseInt(numero1.getText());
-            int num2 = Integer.parseInt(numero2.getText());
-            int resultado = num1 - num2;
-            caja1.setText("" + resultado);
+        ConDolares.addActionListener(e -> {
+            Double valor=Double.parseDouble(campo.getText());
+            resultado.setText(""+(valor/cambio));
         });
-        JLabel etiqueta = new JLabel("COLOR:");
-        JButton Rojo = new JButton("Rojo");
-        panel.add(Rojo);
-        JButton Verde = new JButton("Verde");
-        panel.add(Verde);
-        JButton Azul = new JButton("Azul");
-        panel.add(Azul);
-        Rojo.addActionListener(e -> {
-            etiqueta.getForeground();
-        });
-        Verde.addActionListener(e -> {
-            etiqueta.getForeground();
-        });
+        ventana.setVisible(true);
     }
 }
