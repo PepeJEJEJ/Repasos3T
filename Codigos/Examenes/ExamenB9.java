@@ -37,11 +37,11 @@ public class ExamenB9 {
         panelInferior.setLayout(new FlowLayout()); // FlowLayout según el PDF
 
         JButton botonCalcular = new JButton("BotonCalcular");
-        JTextField tfResultado = new JTextField(15);
-        tfResultado.setEditable(false);
+        JTextField EResul = new JTextField(15);
+        EResul.setEditable(false);
 
         panelInferior.add(botonCalcular);
-        panelInferior.add(tfResultado);
+        panelInferior.add(EResul);
 
         ventana.add(panelInferior, BorderLayout.SOUTH);
 
@@ -87,7 +87,7 @@ public class ExamenB9 {
             double resultado = sumaPrecios * sumaUnidades;
             // No se usa format; se muestra el número tal cual y se añade el símbolo euro
             String resultadoFormateado = Double.toString(resultado) + " €";
-            tfResultado.setText(resultadoFormateado);
+            EResul.setText(resultadoFormateado);
             JOptionPane.showMessageDialog(ventana, "Resultado = " + resultadoFormateado);
         });
 
