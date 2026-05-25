@@ -4,7 +4,7 @@ public class Cinco {
     public static void main(String[] args) {
         try {
             double cambio = 0.80;
-            JFrame ventana = new JFrame("Por el qlo te la hinco, Conversor Euros/Dólares");
+            JFrame ventana = new JFrame("Conversor Euros/Dólares");
             ventana.setSize(300, 150);
             ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
