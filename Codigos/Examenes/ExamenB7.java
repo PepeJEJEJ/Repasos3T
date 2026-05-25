@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class ExamenB7 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        ArrayList<String> pleilist = new ArrayList<>(); // usar genéricos tal como indica el PDF
+        ArrayList<String> pleilist = new ArrayList<>();
         boolean finprograma = false;
 
         while (!finprograma) {
@@ -23,7 +23,7 @@ public class ExamenB7 {
             String linea = sc.nextLine();
             int opcion;
             try {
-                opcion = Integer.parseInt(linea.trim());
+                opcion = Integer.parseInt(linea);
             } catch (NumberFormatException nfe) {
                 System.out.println("Opción no válida. Introduce un número.");
                 continue;
@@ -33,7 +33,7 @@ public class ExamenB7 {
                 switch (opcion) {
                     case 1: // Añadir canción
                         System.out.print("Cancion a añadir: ");
-                        String nombre = sc.nextLine().trim();
+                        String nombre = sc.nextLine();
                         if (nombre.isEmpty()) {
                             System.out.println("Nombre vacío. No se añade.");
                         } else {
@@ -44,7 +44,7 @@ public class ExamenB7 {
 
                     case 2: // Buscar canción
                         System.out.print("Buscar Cancion: ");
-                        String esta = sc.nextLine().trim();
+                        String esta = sc.nextLine();
                         if (pleilist.contains(esta)) {
                             System.out.println("SÍ está en la playlist");
                         } else {
@@ -54,7 +54,7 @@ public class ExamenB7 {
 
                     case 3: // Eliminar canción por valor
                         System.out.print("Cancion para borrar: ");
-                        String borrar = sc.nextLine().trim();
+                        String borrar = sc.nextLine();
                         if (pleilist.isEmpty()) {
                             System.out.println("La playlist está vacía.");
                         } else {
