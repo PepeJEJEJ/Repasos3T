@@ -5,9 +5,9 @@ public class ExamenB7 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ArrayList<String> pleilist = new ArrayList<>();
-        boolean finprograma = false;
+        boolean fin = false;
 
-        while (!finprograma) {
+        while (!fin) {
             // Mostrar menú para que el usuario sepa las opciones
             System.out.println("\nElige una opcion:");
             System.out.println("1 - Añadir canción");
@@ -58,8 +58,8 @@ public class ExamenB7 {
                         if (pleilist.isEmpty()) {
                             System.out.println("La playlist está vacía.");
                         } else {
-                            boolean removed = pleilist.remove(borrar); // remove(Object)
-                            if (removed) {
+                            boolean eliminar = pleilist.remove(borrar);
+                            if (eliminar) {
                                 System.out.println("Canción borrada: " + borrar);
                             } else {
                                 System.out.println("La canción no existe en la playlist.");
@@ -99,7 +99,7 @@ public class ExamenB7 {
 
                     case 8: // Salir
                         System.out.println("Saliendo...");
-                        finprograma = true;
+                        fin = true;
                         break;
 
                     default:
