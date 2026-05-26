@@ -1,5 +1,3 @@
-package V;
-
 import java.util.*;
 
 public class Carrito {
