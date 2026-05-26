@@ -2,10 +2,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.*;
 
-public class Main9 {
+public class Main6 {
     public static void main(String[] args) {
 
-        JFrame ventana = new JFrame("Sesenta y Nueve");
+        JFrame ventana = new JFrame("Sexto");
         ventana.setSize(300, 180);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -31,11 +31,12 @@ public class Main9 {
             String pass = new String(campoPass.getPassword());
 
             boolean ok = comprobarLogin(usuario, pass);
+
             if (ok) {
-                JOptionPane.showMessageDialog(null, "Inicio de sesión correcto");
+                resultado.setText("Inicio de sesión correcto");
                 resultado.setForeground(Color.GREEN);
             } else {
-                JOptionPane.showMessageDialog(null, "Inicio de sesión incorrecto");
+                resultado.setText("Inicio de sesión incorrecto");
                 resultado.setForeground(Color.RED);
             }
         });

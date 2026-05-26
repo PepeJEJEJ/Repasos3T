@@ -4,7 +4,7 @@ import java.util.Random;
 public class Main10 {
     public static void main(String[] args) {
 
-        JFrame ventana = new JFrame("Diez");
+        JFrame ventana = new JFrame("Decimo");
         ventana.setSize(300, 150);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

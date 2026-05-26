@@ -2,7 +2,7 @@ import javax.swing.*;
 
 public class Main3 {
     public static void main(String[] args) {
-        JFrame ventana = new JFrame("Tres");
+        JFrame ventana = new JFrame("Tercero");
         ventana.setSize(300, 200);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel panel = new JPanel();

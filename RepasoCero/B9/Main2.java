@@ -2,7 +2,7 @@ import javax.swing.*;
 
 public class Main2 {
     public static void main(String[] args) {
-        JFrame ventana = new JFrame("Dos");
+        JFrame ventana = new JFrame("Segundo");
         ventana.setSize(400, 300);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

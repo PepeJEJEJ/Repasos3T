@@ -4,7 +4,7 @@ import java.awt.*;
 public class Main8 {
     public static void main(String[] args) {
 
-        JFrame ventana = new JFrame("A la Burra le πk el Ch8 Panel de Control");
+        JFrame ventana = new JFrame("Octavo");
         ventana.setSize(400, 300);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ventana.setLayout(new BorderLayout());

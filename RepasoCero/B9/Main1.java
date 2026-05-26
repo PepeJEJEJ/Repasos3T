@@ -3,7 +3,7 @@ import javax.swing.*;
 public class Main1 {
     public static void main(String[] args) {
 
-        JFrame ventana = new JFrame("Uno");
+        JFrame ventana = new JFrame("Primer");
         ventana.setSize(400, 300);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

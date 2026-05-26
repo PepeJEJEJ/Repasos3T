@@ -4,7 +4,7 @@ import java.awt.*;
 public class Main7 {
     public static void main(String[] args) {
 
-        JFrame ventana = new JFrame("Por el qlo 7 mueve el Teclado");
+        JFrame ventana = new JFrame("Septimo");
         ventana.setSize(250, 300);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

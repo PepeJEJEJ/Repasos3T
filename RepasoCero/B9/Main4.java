@@ -3,7 +3,7 @@ import java.awt.*;
 
 public class Main4 {
     public static void main(String[] args) {
-        JFrame ventana = new JFrame("Cuatro");
+        JFrame ventana = new JFrame("Cuarto");
         ventana.setSize(300, 200);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel panelPrincipal = new JPanel();
