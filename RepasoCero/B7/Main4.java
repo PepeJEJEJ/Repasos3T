@@ -56,7 +56,8 @@ public class Main4 {
                         Iterator<Map.Entry<String, Integer>> it = productos.entrySet().iterator();
                         while (it.hasNext()) {
                             Map.Entry<String, Integer> producto = it.next();
-                            System.out.println("Existencias del producto: "+producto.getKey() + ": " + producto.getValue());
+                            System.out.println(
+                                    "Existencias del producto: " + producto.getKey() + ": " + producto.getValue());
                         }
                         break;
 
