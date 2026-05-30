@@ -12,20 +12,23 @@ public class inventari {
                 System.out.println("Dame su Stock");
                 int Stock = sc.nextInt();
                 Productos.put(nombre, Stock);
+                sc.nextLine();
                 i += 1;
+                System.out.println("Producto numero: " + i);
             } while (i < 5);
-            System.out.println("Dame algo en español");
-            
-            if (Productos.containsKey(Traducir)) {
-                System.out.println(Productos.get(Traducir));
+            System.out.println("Dame el nombre del producto al cual actualizaremos su stock");
+            String nombre = sc.nextLine();
+            System.out.println("Ponle un nuevo stock");
+            int NStock = sc.nextInt();
+            if (Productos.containsKey(nombre)) {
+                Productos.put(nombre, NStock);
+                System.out.println(nombre + " Actualizado");
             } else {
-                System.out.println("No sale");
+                System.out.println("No existe eso");
             }
+
         } catch (Exception e) {
             System.out.println(e);
         }
-    }
-    public void name() {
-        
     }
 }
