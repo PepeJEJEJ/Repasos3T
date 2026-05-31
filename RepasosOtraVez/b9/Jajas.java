@@ -14,10 +14,12 @@ public class Jajas {
         JButton Adivinar = new JButton("Acertijos");
         panel.add(Adivinar);
         String[] ListaChistes = {
-                "E"
+                "E",
+                "EA"
         };
         String[] ListaAdivinanzas = {
-                "A"
+                "A",
+                "B"
         };
         Random r = new Random();
         Chistes.addActionListener(e -> {
