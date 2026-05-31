@@ -7,24 +7,24 @@ public class Jajas {
         JFrame ventana = new JFrame("XD");
         ventana.setSize(412, 313);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JPanel panel=new JPanel();
+        JPanel panel = new JPanel();
         ventana.add(panel);
-        JButton Chiste=new JButton("aa");
+        JButton Chiste = new JButton("aa");
         ventana.add(Chiste);
-        JButton Adivinanza=new JButton("ee");
+        JButton Adivinanza = new JButton("ee");
         ventana.add(Adivinanza);
-        Random r=new Random();
-        String[]ListaChistes={
-            "A"
+        Random r = new Random();
+        String[] ListaChistes = {
+                "A"
         };
-        String[]listaAdivinanzas={
-            "B"
+        String[] listaAdivinanzas = {
+                "B"
         };
-        Chiste.addActionListener(e->{
+        Chiste.addActionListener(e -> {
             int i = r.nextInt(ListaChistes.length);
             JOptionPane.showInputDialog(ventana, ListaChistes[i], "AA", JOptionPane.PLAIN_MESSAGE);
         });
-        Adivinanza.addActionListener(e->{
+        Adivinanza.addActionListener(e -> {
             int i = r.nextInt(listaAdivinanzas.length);
             JOptionPane.showInputDialog(ventana, listaAdivinanzas[i], "BB", JOptionPane.PLAIN_MESSAGE);
         });
