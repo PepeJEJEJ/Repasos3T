@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class a {
+public class configuracion {
     public static void main(String[] args) {
         String idioma = "";
         String volumen = "";
