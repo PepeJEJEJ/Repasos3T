@@ -1,7 +1,7 @@
 import java.awt.*;
 import javax.swing.*;
 import java.io.*;
-//EXAMEN CORREGIDO (CASI)
+//EXAMEN RECUP. CASI :'(
 public class Main {
 
     public static void main(String[] args) {
@@ -10,6 +10,7 @@ public class Main {
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panel = new JPanel();
+        panel.setLayout(new FlowLayout());
         ventana.add(panel);
 
         JTextField nombre = new JTextField(10);
@@ -34,14 +35,30 @@ public class Main {
         añadir.addActionListener(e -> {
             String n = nombre.getText();
             String t = telefono.getText();
+
+            if (n.isEmpty() || t.isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Rellena ambos campos");
+                return;
+            }
+
             area.append(n + " : " + t + "\n");
+            nombre.setText("");
+            telefono.setText("");
         });
 
         // Guardar en TXT
         guardar.addActionListener(e -> {
             String n = nombre.getText();
             String t = telefono.getText();
+
+            if (n.isEmpty() || t.isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Rellena ambos campos");
+                return;
+            }
+
             guardarContacto(n, t);
+            nombre.setText("");
+            telefono.setText("");
         });
 
         // Leer TXT
@@ -68,7 +85,10 @@ public class Main {
     public static String leerContactos() {
         StringBuilder sb = new StringBuilder();
         try {
-            BufferedReader br = new BufferedReader(new FileReader("contactos.txt"));
+            File f = new File("contactos.txt");
+            if (!f.exists()) return "No hay contactos guardados.";
+
+            BufferedReader br = new BufferedReader(new FileReader(f));
             String linea;
             while ((linea = br.readLine()) != null) {
                 sb.append(linea).append("\n");
